@@ -24,7 +24,7 @@ namespace PD.Demo.AngularHttpOnlyCookie.Controllers
             Response.Cookies.Append("testhttpcookie", "testauthtoken", new CookieOptions
             {
                 HttpOnly = true,
-                SameSite = SameSiteMode.None,
+                SameSite = SameSiteMode.Strict,
                 Secure = true,
                 Expires = DateTime.UtcNow.AddDays(10),
                 Domain = "localhost"
